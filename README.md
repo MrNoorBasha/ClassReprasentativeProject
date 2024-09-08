@@ -6,7 +6,9 @@ The **Class Representative Duties Project** is designed to assist class represen
 ### Features:
 - Add new Xerox requests for students and professors.
 - Update existing requests.
-- Delete Xerox data as required.
+- Delete Xerox data as required
+- ![HomePage](https://github.com/user-attachments/assets/24fab105-a70f-4f39-8b52-38aa356f8780)
+.
 - Display the complete list of Xerox requirements.
 
 ## Installation
@@ -16,3 +18,4 @@ To set up and run this project locally, follow the steps below:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/MrNoorBasha/ClassReprasentativeProject.git
+   
