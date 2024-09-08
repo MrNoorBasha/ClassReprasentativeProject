@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}" sizes="16*16">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">  
+    
+    body{
+      background-color: #112233;
+
+
+    }
+    ul {
+  /* list-style-type: none;
+  margin: -20px;
+  padding: 60px;
+  width: 10%;
+  height: 60%;
+   */
+      position: absolute;
+      top: 0%;
+     bottom: 0;
+    height: 90%;
+    left: 0;
+    width: max-content;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    z-index: 1000;
+    padding: 25px;
+    margin: 8px;
+    padding-top: 100px;
+    list-style-type: none;
+} 
+
+
+li a {
+  display: block;
+  background-color: #dddddd;
+  padding: 20px;
+  text-decoration: none;
+  margin: 30px;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+li a:hover{
+  background-color: green;
+  color: orange;
+  font-weight: bold;
+}
+    /*
+      ul{
+        border: 2px solid wheat;
+        background-color: black;
+        border-radius: 30x;
+        margin-top: 10px;
+        font-size: 25px;
+        box-sizing: border-box;
+
+
+      }
+      li{
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        margin-left: 1px;
+
+      }
+      li a {
+        text-decoration: none;
+        margin-top: 30px;
+        margin-left: 30px;
+        color: white;
+      } 
+    */
+      
+      h1
+	{
+		color: white;
+		padding-top: 10px;
+	 	padding-left: 200px;
+		border: 3px solid black;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+		margin-left: 50px;
+		margin-top:30px;
+		border-top: none;
+		border-left: none;
+		border-image: none;
+		border-bottom-color:orange;
+		margin-right: 70px;
+		border-bottom-width: 10px;
+
+	}
+  
+  img{
+    height: 100%;
+    width: 80%;
+    padding-left: 250px;
+    margin: 10px;
+  }
+      
+  p{
+    color: orange;
+    font-size: 15px;
+    padding: 30px;
+    padding-left: 350px;
+    margin: 30px;
+    border: 2px solid wheat;
+    border-radius: 10px;
+    
+
+  }
+    </style>
+
+  </head>
+<body>
+  <h1>
+		Kandula Sivananda Reddy Memorial College of Engineering
+	</h1>
+  <ul>
+
+    <li><a class="one" href="https://www.ksrmce.ac.in/">Home</a></li>
+    <li><a class="two" href="{% url 'submit' %}">Students</a></li>
+    <li><a href="{% url 'professor' %}">Pofessors</a></li>
+    <li><a class="three" href="{% url 'display' %}">Student Records</a></li>
+    <li><a href="{% url 'professor_records' %}">Professor Records</a></li>
+    
+  </ul>
+  <img src='{% static "images/ksrm.jpeg" class="rounded" alt="Cinque Terre"  %}'> 
+
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem odit a, minima molestias sint, blanditiis quia vel quibusdam earum cum iusto magnam perferendis molestiae quaerat laboriosam eum neque magni sunt.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae aliquid nobis saepe explicabo molestias excepturi aut odio eaque quas. Quas ut voluptates reiciendis quo, numquam illum ea facilis ex assumenda.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quisquam ea eum ipsa earum nobis laudantium possimus, sequi accusamus a, quas natus maxime sit tempore error quo voluptatibus qui quos?
+  </p>
+  
+   
+</body>
+</htmc>

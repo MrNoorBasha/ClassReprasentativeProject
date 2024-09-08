@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Display</title>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}"/ sizes="16*16">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="C:\Users\basha\Desktop\HTML\Bussiness_Website\Browse_Icon.png">
+	<style>
+
+	body
+	{
+      background-color: #112233;
+	 }
+
+	h1
+	{
+		color: white;
+		padding-top: 10px;
+	 	padding-left: 200px;
+		border: 3px solid black;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+		margin-left: 50px;
+		margin-top:30px;
+		border-top: none;
+		border-left: none;
+		border-image: none;
+		border-bottom: none;
+		margin-right: 70px;
+		font-size: 30px;
+
+
+	}
+	h2{
+		color:yellow;
+		font-style: italic;
+		padding: 20px 20px;
+		border-bottom: 2px solid rgba(160, 137, 10, 0.507);
+		border-left: 10px solid white;
+		font-size: 20px;
+
+	}
+
+	table {
+		
+		
+		width: 80%;
+		height: 80%;
+		float: right;
+		margin-right: 20px;
+		border-collapse: collapse;
+	}
+	table tr{
+		color: rgba(209, 173, 12, 0.801);
+		font-style: italic;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 2px;
+
+		
+
+
+	}
+	
+	table tr th{
+		color: pink;
+		font-weight: bold;
+		font-size: 15px;
+		
+	}
+	.btn {
+		color: green;
+		font-size: 23px;
+	}
+	.btn:hover{
+		font-size: 23px;
+		color: green;
+	}
+	.btn2 {
+		color: rgba(217, 22, 235, 0.562);
+		font-size:20px;
+	}
+	.btn2:hover{
+		font-size: 23px;
+	}
+	.btn3 {
+		color: RED;
+		font-size:20px;
+	}
+	.btn3:hover{
+		font-size: 23px;
+	}
+
+	.redirect{
+		padding: 10px;
+		margin: 10px;
+		border-radius: 20px	;
+	}
+
+
+	</style>
+</head>
+<body>
+	<h1>
+		Kandula Sivananda Reddy Memorial College of Engineering
+	</h1>
+	<div class="header">
+		<h2>Copies_Enrollement_List</h2>
+	</div>
+
+
+
+<div class="table">
+ <table id="mytable">
+ 	<tr>
+ 	 	<th>Name</th>
+ 		<th>Rollno</th>
+ 		<th >View</th>
+ 		<th>Update</th>
+ 		<th>Delete</th>
+ 	</tr>
+ 	{% for i in data %}
+ 	<tr>
+ 		<td>{{ i.name }}</td>
+ 		<td>{{ i.employee_id }}</td>
+ 		<td><a href="{% url 'pro_view' i.id %}"  class="btn" >Show</a></td>
+		<td><a href="{% url 'update' i.id %}" class="btn2">Update</a></td>
+		<td><a href="{% url 'delete' i.id %}" class="btn3">Delete</a></td>
+ 		
+ 	</tr>
+ 	{% endfor %}
+ 	
+
+ </table>
+</div>
+
+  <a class="two" href="{% url 'submit' %}">
+	<button class="redirect">back</button>
+  </a>
+
+</a>
+<script>
+
+</script>
+</body>
+</html>

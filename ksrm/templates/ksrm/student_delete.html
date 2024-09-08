@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delete</title>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}"/ sizes="16*16">
+		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<style>
+			*{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif,'Poppins';
+
+	}
+	body{
+		
+	max-height: 100vh;
+	background: #112233;
+	background-position: fixed;
+	
+	
+	}
+	
+	h1
+	{
+		color: white;
+		padding-top: 10px;
+	 	padding-left: 200px;
+		border: 3px solid black;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+		margin-left: 50px;
+		margin-top:30px;
+		border-top: none;
+		border-left: none;
+		border-image: none;
+		border-bottom: none;
+		margin-right: 70px;
+		font-size: 30px;
+
+
+	}
+	h2{
+		color: yellow;
+		padding: 40px;
+		margin: 20px;
+	}
+	.actions{
+		padding: 20px;
+		margin: 40px;
+	}
+		</style>
+</head>
+<body>
+	<h1>
+		Kandula Sivananda Reddy Memorial College of Engineering
+	</h1>
+	<form action="{% url 'delete' data.id %}" method="POST">
+		{%csrf_token %}
+		<h2>Are You sure to delete {{ data.name }} </h2>
+		<div class="actions">
+
+
+		<a href="{% url 'display'  %}" class="btn btn-primary">cancel </a>
+		<button type="submit" class="btn btn-success" >Conform </button>
+	</div>
+</body>
+</html>

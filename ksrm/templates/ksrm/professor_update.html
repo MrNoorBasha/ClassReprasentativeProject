@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		  <style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+		
+		max-height: 100vh;
+		background: #112233;
+		background-position: fixed;
+		
+		
+			}	
+			
+	h1
+	{
+		color: white;
+		padding-top: 10px;
+	 	padding-left: 200px;
+		border: 3px solid black;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+		margin-left: 50px;
+		margin-top:30px;
+		border-top: none;
+		border-left: none;
+		border-image: none;
+		border-bottom: none;
+		margin-right: 70px;
+		font-size: 30px;
+
+
+	}
+	form {
+		color:rgba(8, 226, 26, 0.781);
+		border: 2px solid white;
+		padding: 30px;
+		border-top-left-radius: 40px;
+		border-bottom-left-radius: 20px;
+		border-right-color: saddlebrown;
+		border-right-width: 10px;
+		font-weight: bold;
+	}
+	form input{
+		padding-left: 30px;
+		color: red;
+		font-weight: bold;
+		display: flex;
+	}
+	
+    .card{
+        padding: 20px;
+        left: 50%;
+        margin-top: 10%;
+
+    }
+		  </style>
+</head>
+<body>
+	<h1>
+		Kandula Sivananda Reddy Memorial College of Engineering
+	</h1>
+	
+	<div class="col-sm-6">
+	<div class="card">
+		<div class="card-header bg-danger">
+			<h4>Profile Info</h4>
+		</div>
+		<div class="card-body">
+			<table border="1" class="table table-success">
+<form method="POST" action="" class="box">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="btn btn-success">Update</button>
+</form>
+</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

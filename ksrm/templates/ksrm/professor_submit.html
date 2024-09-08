@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>signup</title>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}"/ sizes="16*16">
+		
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  
+  <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+  <style>
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif,'Poppins';
+
+	}
+	body{
+		
+	max-height: 100vh;
+	background: #112233;
+	background-position: fixed;
+	
+	
+	}
+	.details{
+
+		display: flex;
+		justify-content: center;
+	    align-items:center;
+		padding: 20px;
+		margin-top: 40px;
+
+	}
+	h1{
+		color: orange;
+		font-weight: bold;
+		font-size: 30px;
+		font-style: italic;
+		margin-right: 100px;
+		background-origin: padding-box;
+		padding: 20px;
+		
+	}
+	h1:hover{
+	
+		color: orange;
+		border-color: black;
+		
+
+	}
+	form {
+		color:rgba(228, 159, 10, 0.918);
+		padding: 40px;
+		font-weight: bold;
+	}
+	form input{
+		padding-left: 30px;
+		color: black;
+		font-weight: bold;
+		display: flex;
+	}
+	h2
+	{
+		color: white;
+
+		padding-top: 10px;
+	 	padding-left: 200px;
+		border: 3px solid black;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+		margin-left: 50px;
+		margin-top:30px;
+		border-top: none;
+		border-left: none;
+		border-image: none;
+		border-bottom-color:orange;
+		margin-right: 70px;
+		border-bottom-width: 10px;
+
+	}
+	.btn1{
+      color: white;
+      background-color: red;
+      border-radius: 10px;
+      border: 2px solid black;
+	  padding: 7px 20px;
+	  margin-left: 50px;
+  	}
+	.btn1:hover{
+    background-color: red;
+	}
+	.redirect{
+		padding: 10px;
+		border-radius: 10px;
+		margin-left: 190px;
+		background-color: black;
+		color: white;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+    .forms{
+        padding: 20px;
+    }
+    .item{
+        padding: 20px;
+        padding-bottom: 20px;
+        border: 2px solid wheat;
+        border-radius: 20px;
+        margin: 20px;
+    }
+    .button{
+        padding: 30px;
+        left: 30px;
+    }
+	
+
+  </style>
+</head>
+<body>
+	<h2>
+		Kandula Sivananda Reddy Memorial College of Engineering
+	</h2>
+<div class="details">
+	
+	<h1>
+		<b>	Enter Your Details....</b> 
+	</h1>
+<div class="forms">
+
+
+
+<!-- Professor Form -->
+    <h2>Professor Details</h2>
+    <form action='{% url "professor" %}' method='POST' class="item">
+        {% csrf_token %}
+        {{ formfields.as_table }}
+        <div class="button">
+            
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </form> 
+</div>
+	
+	<a class="two" href="{% url 'index' %}">
+		<button class="redirect">back</button>
+	  </a>
+	
+</div>
+
+
+</body>
+</html>
