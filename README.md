@@ -15,4 +15,4 @@ To set up and run this project locally, follow the steps below:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/MrNoorBasha/ClassRepresentativeProject.git
+   git clone https://github.com/MrNoorBasha/ClassReprasentativeProject.git
